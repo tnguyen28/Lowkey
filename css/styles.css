@@ -146,6 +146,7 @@ div {
     text-align: center;
     display: inline-block;
     border-radius: 4px;
+    margin: 10px;
 }
 
 @media screen and (max-width: 700px) {
