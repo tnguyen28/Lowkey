@@ -1,12 +1,16 @@
-//contact modal
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () { myFunction() };
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
-  });
+// Get the navbar
+var navbar = document.getElementById("navbar");
 
-  // Or with jQuery
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
 
-  $(document).ready(function(){
-    $('.modal').modal();
-  });
+function stickyNavBar() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
