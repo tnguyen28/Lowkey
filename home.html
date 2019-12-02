@@ -6,30 +6,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='css/styles.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 
 
 <body>
-
+    <!-- NAV BAR -->
+    <nav>
+        <div class='nav-wrapper'>
+            <a href='#' class='brand-logo'>Lowkey</a>
+            <ul id='nav-mobile' class='right hide-on-med-and-down'>
+                <li class='active'><a href='home.html'>Home</a></li>
+                <li><a href='#contactmodal' class='modal-trigger'>Contact</a></li>
+                <li><a href='categories.html'>Categories</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="header">
         <h1>Explore New Restaurants!</h1>
         <p>Discover small businesses near you</p>
     </div>
 
-    <div class="navbar">
-        <a href="categories.html" class="right">Categories</a>
-        <a href="contacts.html" class="right">Contact</a>
-        <a href="home.html" class="right" class='active'>Home</a>
+    <!-- Modal Structure -->
+    <div id="contactmodal" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
     </div>
-
 
     <!-- MAPS -->
 
 
-    <div class="footer">
-        <h2>Footer</h2>
-    </div>
+    <footer class='page-footer'>
+        <div class='footer-copyright'>
+            <div class='container'>
+                @2019 Lowkey
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/scripts/home.js"></script>
 </body>
 
 </html>
