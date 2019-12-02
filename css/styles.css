@@ -5,6 +5,9 @@ body {
     font-size: 28px;
     background-color:#e6e6e6;
 }
+div {
+    align-items: center;
+}
 
 /*header style*/
 .header {
@@ -67,6 +70,7 @@ body {
     display: inline-block;
     font-size: 16px;
     margin: 10px;
+    border-radius: 4px;
   }
 
 .modal {
@@ -133,6 +137,17 @@ body {
     background: #ddd;
 }
 
+.stickytimezonefooter {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: #0099e6;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 10px;
+}
 
 @media screen and (max-width: 700px) {
     .row {
