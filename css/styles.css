@@ -1,6 +1,7 @@
-
+html {
+    font-family: 'Dosis', sans-serif;
+}
 body {
-    font-family: Arial, Arial, Helvetica, sans-serif;
     margin: 0;
     font-size: 28px;
     background-color:#e6e6e6;
@@ -35,6 +36,7 @@ div {
 #navbar {
     overflow: hidden;
     background-color:  #f2f2f2;
+    z-index: 10;
   }
   
   #navbar a {
@@ -72,16 +74,16 @@ div {
   }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed;
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
 }
 
 .modal-content {
@@ -151,8 +153,8 @@ div {
     width: 100%;
     height: 400px;
 }
-/* 
-.card:hover {
+
+/* .card:hover {
     background-color: ;
     color: black;
 } */
@@ -162,18 +164,23 @@ div {
     grid-gap: 10px;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
-    justify-content: center;
+    justify-content: left;
 }
 
 .card {
     width: 300px;   
     height: 300px;
-    border: 1px solid #0099e6;   
+    /* border: 2px solid #0099e6;    */
     border-radius: 4px;          
     overflow: hidden;         
     display: flex;               
     flex-direction: column;  
     background-color: #f2f2f2;
+}
+
+.card:hover {
+    box-shadow: 2px 8px 45px rgba(0,0,0,.15);
+    transform: translate3D(0,-4px,0);
 }
 .card-header {
     color: black;
@@ -181,25 +188,52 @@ div {
     font-size: 20px;
     font-weight: 600;
     width:100%;
-    height: 15%;
-    border-bottom: 1px solid #0099e6;
-    background-color: #0099e6;
+    height: 60%;
+    /* border-bottom: 1px solid #0099e6;
+    background-color: #0099e6; */
     padding: 5px 10px;
     align-items: center;
+    position: relative;
   }
   
   .card-main {
     display: flex;             
     flex-direction: column;     
-    justify-content: center;    
-    align-items: center;        
-    padding: 15px 0;          
+    align-content: center;
+    text-align: left;      
+    width: 100%;
   }
   
   .main-description {
-    color: #0099e6;
-    font-size: 12px;
-    text-align: center;
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    margin-left: 50px;
+  }
+
+  .img {
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  }
+  .open {
+      color: white;
+      width:70px;
+      border: 2px solid green;
+      position: absolute;
+      background-color: green;
+      top: 0;
+      right: 0;
+      
+  }
+  .closed {
+    color: white;
+    width:90px;
+    border: 2px solid red;
+    position: relative;
+    background-color: red;
   }
 
 #root {
