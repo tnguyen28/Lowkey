@@ -27,7 +27,7 @@ function showPosition(position) {
     var request = {
         location: currentLocation,
         radius: 500,
-        type: ['restaurant'],
+        types: ['restaurant'],
     };
 
     var service = new google.maps.places.PlacesService(document.createElement('div'));
@@ -47,18 +47,10 @@ function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
 
         var data = results;
+        
+         console.log(data)
 
-        console.log(data)
-        // var filteredData = []
-        // data.forEach(place => {
-        //     if(place.reviews.length > 0){
-        //         //nohtign
-        //     } else {
-        //         return
-        //     }
-        //     filteredData.push(place)
-        // })
-
+      
         data.forEach(place => {
 
             const card = document.createElement('div')
@@ -68,14 +60,12 @@ function callback(results, status) {
             const cardheader = document.createElement('div')
             cardheader.setAttribute('class', 'card-header')
 
-            var photos = place.photos
-
-            const image = (photos != undefined) ? ('background-image: url("' + photos[0].getUrl({'maxWidth': 100, 'maxHeight': 100}) + '")') : ''
             const cardImage = document.createElement('img')
             cardImage.setAttribute('class', 'img')
-            cardImage.setAttribute('style', image)
+            cardImage.setAttribute('src', place.photos[0].getUrl({'maxWidth': 250, 'maxHeight': 250}))
+            cardImage.setAttribute('style','width: 290px; height:180px')
             cardheader.appendChild(cardImage)
-
+        
             const cardmain = document.createElement('div')
             cardmain.setAttribute('class', 'card-main')
 
@@ -88,17 +78,19 @@ function callback(results, status) {
             cardd1.textContent = description
 
             const cardd2 = document.createElement('p')
+            cardd2.setAttribute('style','font-size: 14px')
             cardd2.textContent = place.vicinity
 
             const cardd3 = document.createElement('div')
-
-            if(place.opening_hours.open_now == true){
+            cardd3.setAttribute('style','text-align: center;')
+            if (place.opening_hours.open_now === true) {
                 cardd3.setAttribute('class', 'open')
-                cardd3.setAttribute('style', 'color: white; ')
                 cardd3.textContent = 'OPEN'
-            } else {
+            } else if(place.opening_hours.open_now === false){
                 cardd3.setAttribute('class', 'closed')
                 cardd3.textContent = 'CLOSED'
+            } else if(place.opening_hours.open_now === undefined){
+                console.log('cannot find if open')
             }
 
             carddescription.appendChild(cardd1)
