@@ -232,8 +232,10 @@ div {
     color: white;
     width:90px;
     border: 2px solid red;
-    position: relative;
+    position: absolute;
     background-color: red;
+    top: 0;
+    right: 0;
   }
 
 #root {
