@@ -4,26 +4,105 @@
     <title>Lowkey</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="css/timezonegrid.css" type="text/css" />
   </head>
 
   <body>
     <div class="header">
       <h1>Explore New Restaurants!</h1>
-      <p>Discover small businesses near you</p>
+      <p>Try something different</p>
     </div>
 
-    <div class="navbar">
-      <a href="categories.html" class="right">Categories</a>
-      <a href="contacts.html" class="right">Contact</a>
-      <a href="home.html" class="right" class="active">Home</a>
-      <a href="loginscreen.html" class="right">Login/Signup</a>
+    <!-- NAV BAR -->
+    <div id="navbar">
+      <a href="categories.html">Categories</a>
+      <a href="home.html" class="active">Home</a>
     </div>
 
     <!-- MAPS -->
 
-    <div class="footer">
-      <h2>Footer</h2>
+    <footer>
+      <div>
+        <button id="contactbutton" class="button">Contact Us!</button>
+        <div>
+          <p style="font-size: 15px">@2019 Lowkey</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="stickytimezonefooter">
+      <p style="font-size: 15px; padding: 5px;">
+        Current time: <span id="localtime"></span>
+      </p>
     </div>
+
+    <!-- The Modal -->
+    <div id="contactmodal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Contact Us!</h2>
+        </div>
+        <div class="modal-body">
+          <div>
+            <p>Tyler Nguyen</p>
+            <p>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/tyler-nguyen-571984149"
+              >
+                <img src="https://img.icons8.com/officel/40/000000/linkedin.png"
+              /></a>
+
+              <a target="_blank" href="https://github.com/tnguyen28">
+                <img
+                  src="https://img.icons8.com/material-outlined/40/000000/github.png"
+                />
+              </a>
+            </p>
+          </div>
+          <div>
+            <p>Tommy Nguyen</p>
+            <p>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/tyler-nguyen-571984149"
+              >
+                <img src="https://img.icons8.com/officel/40/000000/linkedin.png"
+              /></a>
+
+              <a target="_blank" href="https://github.com/tntttom">
+                <img
+                  src="https://img.icons8.com/material-outlined/40/000000/github.png"
+                />
+              </a>
+            </p>
+          </div>
+          <div>
+            <p>Chris Jose</p>
+            <p>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/tyler-nguyen-571984149"
+              >
+                <img src="https://img.icons8.com/officel/40/000000/linkedin.png"
+              /></a>
+
+              <a target="_blank" href="https://github.com/cj2064">
+                <img
+                  src="https://img.icons8.com/material-outlined/40/000000/github.png"
+                />
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./scripts/stickynavigation.js"></script>
+    <script type="text/javascript" src="./scripts/contactmodal.js"></script>
+    <script type="text/javascript" src="./scripts/currenttime.js"></script>
   </body>
 </html>
