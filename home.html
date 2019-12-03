@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <title>Lowkey</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/styles.css" type="text/css" />
-    <link rel="stylesheet" href="css/timezonegrid.css" type="text/css" />
-  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='css/styles.css' type='text/css'>
+    <link rel='stylesheet' href='css/timezonegrid.css' type='text/css'>
+</head>
 
-  <body>
+<body>
     <div class="header">
       <h1>Explore New Restaurants!</h1>
       <p>Try something different</p>
@@ -21,7 +21,11 @@
       <a href="loginscreen.html">Login/Sign Up</a>
     </div>
 
+
     <!-- MAPS -->
+    <div id='root'></div>
+    <script src='./scripts/places.js'></script>
+
 
     <footer>
       <div>
@@ -32,19 +36,50 @@
       </div>
     </footer>
 
-    <div class="stickytimezonefooter">
-      <p style="font-size: 15px; padding: 5px;">
-        Current time: <span id="localtime"></span>
-      </p>
+    <div class='stickytimezonefooter'>
+        <p style='font-size: 15px; padding: 5px;'>Chicago Time: <span id='localtime'></span></p>
     </div>
 
     <!-- The Modal -->
     <div id="contactmodal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <h2>Contact Us!</h2>
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Contact Us!</h2>
+            </div>
+            <div class="modal-body">
+                <div class='contactDiv'>
+                    <p>Tyler Nguyen</p>
+                    <p>
+                        <a target='_blank' href='https://www.linkedin.com/in/tyler-nguyen-571984149'>
+                            <img src="https://img.icons8.com/officel/40/000000/linkedin.png"></a>
+                        <a target='_blank' href='https://github.com/tnguyen28'>
+                            <img src="https://img.icons8.com/material-outlined/40/000000/github.png">
+                        </a>
+                    </p>
+                </div>
+                <div class='contactDiv'>
+                    <p>Tommy Nguyen</p>
+                    <p>
+                        <a target='_blank' href='https://www.linkedin.com/in/tyler-nguyen-571984149'>
+                            <img src="https://img.icons8.com/officel/40/000000/linkedin.png"></a>
+                        <a target='_blank' href='https://github.com/tntttom'>
+                            <img src="https://img.icons8.com/material-outlined/40/000000/github.png">
+                        </a>
+                    </p>
+                </div>
+                <div class='contactDiv'>
+                    <p>Chris Jose</p>
+                    <p>
+                        <a target='_blank' href='http://linkedin.com/in/christopher-jose-7a449717b'>
+                            <img src="https://img.icons8.com/officel/40/000000/linkedin.png"></a>
+                        <a target='_blank' href='https://github.com/cj2064'>
+                            <img src="https://img.icons8.com/material-outlined/40/000000/github.png">
+                        </a>
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="modal-body">
           <div>
@@ -105,5 +140,8 @@
     <script type="text/javascript" src="./scripts/stickynavigation.js"></script>
     <script type="text/javascript" src="./scripts/contactmodal.js"></script>
     <script type="text/javascript" src="./scripts/currenttime.js"></script>
-  </body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtrwAbkRH6ZpWL7OCW844JP9cF_8KcI3o&libraries=places"
+        type="text/javascript"></script>
+</body>
+
 </html>
