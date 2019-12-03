@@ -27,7 +27,7 @@ function showPosition(position) {
     var request = {
         location: currentLocation,
         radius: 500,
-        type: ['restaurant']
+        type: ['restaurant'],
     };
 
     var service = new google.maps.places.PlacesService(document.createElement('div'));
@@ -48,35 +48,69 @@ function callback(results, status) {
 
         var data = results;
 
-        console.log(data);
+        console.log(data)
+        // var filteredData = []
+        // data.forEach(place => {
+        //     if(place.reviews.length > 0){
+        //         //nohtign
+        //     } else {
+        //         return
+        //     }
+        //     filteredData.push(place)
+        // })
 
         data.forEach(place => {
-            
+
             const card = document.createElement('div')
             card.setAttribute('class', 'card')
             card.setAttribute('style', 'margin: 10px')
 
             const cardheader = document.createElement('div')
             cardheader.setAttribute('class', 'card-header')
-            cardheader.textContent = place.name
-            // const placeImage = place.photos.getUrl({maxWidth: 100, maxHeight: 100})
-            // document.getElementById('div').src = placeImage
+
+            var photos = place.photos
+
+            const image = (photos != undefined) ? ('background-image: url("' + photos[0].getUrl({'maxWidth': 100, 'maxHeight': 100}) + '")') : ''
+            const cardImage = document.createElement('img')
+            cardImage.setAttribute('class', 'img')
+            cardImage.setAttribute('style', image)
+            cardheader.appendChild(cardImage)
 
             const cardmain = document.createElement('div')
             cardmain.setAttribute('class', 'card-main')
 
+            var description = place.name + ' (' + place.rating + '/5*)'
+
             const carddescription = document.createElement('div')
-            carddescription.setAttribute('class', 'card-description')
+            carddescription.setAttribute('class', 'main-description')
+
+            const cardd1 = document.createElement('p')
+            cardd1.textContent = description
+
+            const cardd2 = document.createElement('p')
+            cardd2.textContent = place.vicinity
+
+            const cardd3 = document.createElement('div')
+
+            if(place.opening_hours.open_now == true){
+                cardd3.setAttribute('class', 'open')
+                cardd3.setAttribute('style', 'color: white; ')
+                cardd3.textContent = 'OPEN'
+            } else {
+                cardd3.setAttribute('class', 'closed')
+                cardd3.textContent = 'CLOSED'
+            }
+
+            carddescription.appendChild(cardd1)
+            carddescription.appendChild(cardd2)
 
             container.appendChild(card)
             card.appendChild(cardheader)
+            cardheader.appendChild(cardd3)
             card.appendChild(cardmain)
             cardmain.appendChild(carddescription)
 
         });
-
-
-
     }
 }
 
