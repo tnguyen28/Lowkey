@@ -9,8 +9,6 @@
     <link rel='stylesheet' href='css/timezonegrid.css' type='text/css'>
 </head>
 
-
-
 <body>
     <div class="header">
         <h1>Explore New Restaurants!</h1>
@@ -23,7 +21,11 @@
         <a href="home.html" class='active'>Home</a>
     </div>
 
+
     <!-- MAPS -->
+    <div id='root'></div>
+    <script src='./scripts/places.js'></script>
+
 
     <footer>
         <div>
@@ -85,10 +87,8 @@
     <script type="text/javascript" src="./scripts/stickynavigation.js"></script>
     <script type="text/javascript" src="./scripts/contactmodal.js"></script>
     <script type="text/javascript" src="./scripts/currenttime.js"></script>
-    <!-- <script type="text/javascript" src="./scripts/googlemap.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtrwAbkRH6ZpWL7OCW844JP9cF_8KcI3o&callback=initMap&libraries=places"
-        type="text/javascript"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtrwAbkRH6ZpWL7OCW844JP9cF_8KcI3o&libraries=places"
+        type="text/javascript"></script>
 </body>
 
 </html>
