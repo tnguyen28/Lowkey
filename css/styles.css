@@ -135,7 +135,8 @@ div {
 }
 
 .login {
-  padding-left: 625px;
+  padding-left: 825px;
+  padding-top: 20px;
 }
 
 .login a {
@@ -143,7 +144,16 @@ div {
 }
 
 .login button {
-  font-size: 20px;
+  background-color: #0099e6;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 4px;
 }
 
 .login input {
@@ -151,11 +161,25 @@ div {
 }
 
 .signup {
-  padding-left: 625px;
+  padding-left: 825px;
+  padding-top: 20px;
 }
 
 .signup input {
   font-size: 20px;
+}
+
+.signup button {
+  background-color: #0099e6;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 4px;
 }
 
 .stickytimezonefooter {
