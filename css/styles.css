@@ -14,7 +14,7 @@ div {
 .header {
     padding: 80px;
     text-align: center;
-    background-image: url('../assets/travel-insurance-bag.jpg');
+    background-image: url('../assets/restaurantrelax.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -135,6 +135,10 @@ div {
     padding: 20px;
     text-align: center;
     background: #ddd;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left:50%;
 }
 
 .stickytimezonefooter {
@@ -232,8 +236,10 @@ div {
     color: white;
     width:90px;
     border: 2px solid red;
-    position: relative;
+    position: absolute;
     background-color: red;
+    top: 0;
+    right: 0;
   }
 
 #root {
