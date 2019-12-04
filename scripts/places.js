@@ -44,13 +44,12 @@ function callback(results, status) {
 
     app.appendChild(container)
 
+
+
     if (status == google.maps.places.PlacesServiceStatus.OK) {
-
         var data = results;
-        
-         console.log(data)
+        console.log(data)
 
-      
         data.forEach(place => {
 
             const card = document.createElement('div')
@@ -62,10 +61,10 @@ function callback(results, status) {
 
             const cardImage = document.createElement('img')
             cardImage.setAttribute('class', 'img')
-            cardImage.setAttribute('src', place.photos[0].getUrl({'maxWidth': 250, 'maxHeight': 250}))
-            cardImage.setAttribute('style','width: 290px; height:180px')
+            cardImage.setAttribute('src', place.photos[0].getUrl({ 'maxWidth': 250, 'maxHeight': 250 }))
+            cardImage.setAttribute('style', 'width: 290px; height:180px')
             cardheader.appendChild(cardImage)
-        
+
             const cardmain = document.createElement('div')
             cardmain.setAttribute('class', 'card-main')
 
@@ -78,18 +77,18 @@ function callback(results, status) {
             cardd1.textContent = description
 
             const cardd2 = document.createElement('p')
-            cardd2.setAttribute('style','font-size: 14px')
+            cardd2.setAttribute('style', 'font-size: 14px')
             cardd2.textContent = place.vicinity
 
             const cardd3 = document.createElement('div')
-            cardd3.setAttribute('style','text-align: center;')
+            cardd3.setAttribute('style', 'text-align: center;')
             if (place.opening_hours.open_now === true) {
                 cardd3.setAttribute('class', 'open')
                 cardd3.textContent = 'OPEN'
-            } else if(place.opening_hours.open_now === false){
+            } else if (place.opening_hours.open_now === false) {
                 cardd3.setAttribute('class', 'closed')
                 cardd3.textContent = 'CLOSED'
-            } else if(place.opening_hours.open_now === undefined){
+            } else if (place.opening_hours.open_now === undefined) {
                 console.log('cannot find if open')
             }
 
