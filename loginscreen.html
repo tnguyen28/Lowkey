@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Log into your Lowkey account</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+    <h1>Login to get started</h1>
+    <p>Or sign up with your email!</p>
+  </div>
+
+  <div id="navbar">
+    <a href="categories.html">Categories</a>
+    <a href="home.html">Home</a>
+    <a href="loginscreen.html" class="active">Login/Sign Up</a>
+  </div>
+
+  <!--
+    <div id="logo">
+      <img src="../assets/keysvector.jpg" height="40" width="40" />
+    </div>
+ -->
+
+  <div class="login" style="align-content: center; align-items: center; display: inline-block">
+    <p>
+      <input type="email" id="myEmail" placeholder="Email" value />
+    </p>
+    <p>
+      <input type="password" id="myPassword" placeholder="Password" value />
+    </p>
+    <button type="button"><a href='home.html'>Login</a></button>
+    <p style="font-size: 12px">Or sign up here!</p>
+    <a href="signup.html">Sign Up! </a>
+  </div>
+
+  <div class='stickytimezonefooter'>
+    <p style='font-size: 15px; padding: 5px;'>Chicago Time: <span id='localtime'></span></p>
+
+  </div>
+
+  <script type="text/javascript" src="./scripts/stickynavigation.js"></script>
+  <script type="text/javascript" src="./scripts/currenttime.js"></script>
+</body>
+
+</html>

@@ -247,6 +247,74 @@ div {
     margin: 0 auto;
 }
 
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+.login {
+    padding-left: 50%;
+    padding-top: 20px;
+    }
+    
+.login a {
+    font-size: 15px;
+    }
+    
+    /*
+    .logo {
+      background-image: url("../assets/keysvector.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }*/
+    
+    .login button {
+        background-color: #0099e6;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 10px;
+        border-radius: 4px;
+    }
+    
+    .login input {
+    font-size: 20px;
+    }
+    
+    .signup {
+    padding-left: 50%;
+    padding-top: 20px;
+    }
+    
+    .signup input {
+    font-size: 20px;
+    }
+    
+    .signup button {
+    background-color: #0099e6;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 10px;
+    border-radius: 4px;
+    }
+@keyframes spin {
+    0% { transform: rotate(0deg)}
+    100% { transform: rotate(360deg)} 
+}
+
 @media screen and (max-width: 700px) {
     .row {
         flex-direction: column;
